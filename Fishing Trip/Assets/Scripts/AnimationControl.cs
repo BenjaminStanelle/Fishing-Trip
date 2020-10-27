@@ -23,7 +23,7 @@ public class AnimationControl: MonoBehaviour
 
     void Update()
     {
-        float moveH = Input.GetAxis("Horizontal");
+        float moveH = Input.GetAxisRaw("Horizontal");
         Run(moveH);
         Jump();
 
@@ -33,15 +33,14 @@ public class AnimationControl: MonoBehaviour
 
     public void Run(float moveH)
     {
-        if (Mathf.Abs(moveH) > 0)
-        {
-            if (moveH > 0)
-                TurnRight();
-            if (moveH < 0)
-                TurnLeft();
+       
+        if (moveH > 0)
+            TurnRight();
+        if (moveH < 0)
+            TurnLeft();
 
+        if (Mathf.Abs(moveH) > 0)
             anim.SetInteger("Run", 1);
-        }
         else
         {
             anim.SetInteger("Run", 0);
