@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Tia Deloach Benson
+//Field infinite scrolling
+
 public class Field : MonoBehaviour
 {
     private BoxCollider2D collider;     //bounds that determine when to reposition BG
