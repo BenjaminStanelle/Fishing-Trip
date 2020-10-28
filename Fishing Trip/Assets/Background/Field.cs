@@ -1,11 +1,8 @@
-﻿//Forest infinite scrolling
-//Tia Deloach Benson
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Forest : MonoBehaviour
+public class Field : MonoBehaviour
 {
     private BoxCollider2D collider;     //bounds that determine when to reposition BG
     private Rigidbody2D rigid;     //allows for BG movement
@@ -14,7 +11,7 @@ public class Forest : MonoBehaviour
 
     private void Infinite()   //Attach BG to the end sequence for infinite scrolling
     {
-        Vector2 vector = new Vector2(Vector_width * 3.25f, 0); //get current size of backgrounds combined
+        Vector2 vector = new Vector2(Vector_width * 1.6f, 0); //get current size of backgrounds combined
         transform.position = (Vector2)transform.position + vector;  //add to end of BG list
     }
 
@@ -36,4 +33,5 @@ public class Forest : MonoBehaviour
             Infinite();
         }
     }
+    
 }
