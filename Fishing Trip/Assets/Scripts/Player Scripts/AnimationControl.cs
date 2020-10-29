@@ -24,7 +24,20 @@ public class AnimationControl: MonoBehaviour
 
     public void Run(float moveH)
     {
-        if(Mathf.Abs(moveH)>0)
+        anim.SetInteger("Run", 2);
+        if (Mathf.Abs(moveH) > 0)
+        {
+            if (moveH > 0)
+                anim.speed = 1.5f;
+
+            if (moveH < 0)
+            {
+                anim.speed = .5f;
+            }
+
+        }
+        //original movement code for testing animations
+        /*if (Mathf.Abs(moveH)>0)
         {
             if (moveH > 0)
                 anim.SetInteger("Run", 2);
@@ -37,8 +50,8 @@ public class AnimationControl: MonoBehaviour
         }
         else
             
-            anim.SetInteger("Run", 0);
-        
+            anim.SetInteger("Run", 0);*/
+
     }
    
     public void Jump()
