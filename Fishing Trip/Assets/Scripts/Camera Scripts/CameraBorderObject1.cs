@@ -14,7 +14,7 @@ public class CameraBorderObject1 : MonoBehaviour
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        transform.position = new Vector3(screenBounds.x, screenBounds.y * -1, 0);
+        transform.position = new Vector3(screenBounds.x*-1, screenBounds.y, 0);
         rb = GetComponent<Rigidbody2D>();
         MyPlayer = FindObjectOfType<PlayerMove>();
         rb.gravityScale = 0;
