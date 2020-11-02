@@ -34,7 +34,10 @@ public class AnimationControl: MonoBehaviour
             {
                 anim.speed = .5f;
             }
-
+        }
+        else
+        {
+            anim.speed = 1f;
         }
         //original movement code for testing animations
         /*if (Mathf.Abs(moveH)>0)
