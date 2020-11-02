@@ -5,8 +5,8 @@ using UnityEngine;
 public class CamMove : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private PlayerMove MyPlayer;
 
-    public PlayerMove MyPlayer;
     // Start is called before the first frame update
     void Start()
     {

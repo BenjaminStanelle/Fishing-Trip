@@ -13,6 +13,7 @@ public class GameStart : MonoBehaviour
         Instantiate(BorderLeft, new Vector3(0, 0, 0), Quaternion.Euler(0,0,90));
         Instantiate(BorderRight, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 90));
         Instantiate(Player5, new Vector3(0, 0, 0), transform.rotation);
+        //This stuff creates camera borders, and the player. Player creation will be updated in future.
     }
 
     // Start is called before the first frame update
