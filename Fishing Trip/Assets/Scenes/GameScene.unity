@@ -376,6 +376,8 @@ MonoBehaviour:
     type: 3}
   BorderRight: {fileID: 2782613442742045571, guid: 295e37506186d074eb597715f643a6ca,
     type: 3}
+  field: {fileID: 2560165391203336047, guid: a84c901c8ac4ad44c809d365e8843940, type: 3}
+  cam: {fileID: 1818890981}
 --- !u!1001 &8479326246570366236
 PrefabInstance:
   m_ObjectHideFlags: 0
