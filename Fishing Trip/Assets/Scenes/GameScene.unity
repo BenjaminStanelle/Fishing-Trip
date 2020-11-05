@@ -503,8 +503,11 @@ MonoBehaviour:
     type: 3}
   BorderRight: {fileID: 2782613442742045571, guid: 295e37506186d074eb597715f643a6ca,
     type: 3}
-  field: {fileID: 2560165391203336047, guid: a84c901c8ac4ad44c809d365e8843940, type: 3}
+  field: {fileID: 5720167507140631325, guid: a84c901c8ac4ad44c809d365e8843940, type: 3}
+  forest: {fileID: 8283071987127693092, guid: a3be1cd41cd95ea43b8155e6a594bcef, type: 3}
+  beach: {fileID: 5349175459202798314, guid: 011581b4de0cc7e4798ae9ed9eb2a4be, type: 3}
   cam: {fileID: 1818890981}
+  timer: 0
 --- !u!1001 &8479326246570366236
 PrefabInstance:
   m_ObjectHideFlags: 0
