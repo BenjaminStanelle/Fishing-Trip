@@ -234,9 +234,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed18496974bed24419081570e6588557, type: 3}
---- !u!4 &821076337 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6810747004260180931, guid: ed18496974bed24419081570e6588557,
+--- !u!1 &1509506096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6810747004260180933, guid: ed18496974bed24419081570e6588557,
     type: 3}
   m_PrefabInstance: {fileID: 475390228}
   m_PrefabAsset: {fileID: 0}
@@ -517,9 +517,25 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3242381562992884600, guid: 3f2b3bcc768621248b9de4a15d773af1,
         type: 3}
+      propertyPath: ground.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242381562992884600, guid: 3f2b3bcc768621248b9de4a15d773af1,
+        type: 3}
       propertyPath: groundstart
       value: 
-      objectReference: {fileID: 821076337}
+      objectReference: {fileID: 1509506096}
+    - target: {fileID: 3242381562992884600, guid: 3f2b3bcc768621248b9de4a15d773af1,
+        type: 3}
+      propertyPath: groundpart
+      value: 
+      objectReference: {fileID: 6810747004260180933, guid: ed18496974bed24419081570e6588557,
+        type: 3}
+    - target: {fileID: 3242381562992884600, guid: 3f2b3bcc768621248b9de4a15d773af1,
+        type: 3}
+      propertyPath: ground.Array.data[0]
+      value: 
+      objectReference: {fileID: 1509506096}
     - target: {fileID: 7919938239924779647, guid: 3f2b3bcc768621248b9de4a15d773af1,
         type: 3}
       propertyPath: m_Name
