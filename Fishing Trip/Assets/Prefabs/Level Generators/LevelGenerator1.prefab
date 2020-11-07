@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4beecc80a12e4448351f95bd453a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundpart: {fileID: 6810747004260180931, guid: ed18496974bed24419081570e6588557,
+  groundpart: {fileID: 3992014291112498418, guid: b034d9a5a36270941afc318e007629eb,
     type: 3}
   groundstart: {fileID: 0}
   Spawn_Distance_To_Player: 50
