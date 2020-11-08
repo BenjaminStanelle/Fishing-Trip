@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3930605589302145461}
   - component: {fileID: 3930605589302145460}
   - component: {fileID: 3930605589302145459}
-  - component: {fileID: 3930605589302145458}
   - component: {fileID: 3400065273231940810}
+  - component: {fileID: -8843338533559422374}
   m_Layer: 8
-  m_Name: ScreenBorderLeft
+  m_Name: CamBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1406254867
-  m_SortingLayer: 0
+  m_SortingLayerID: -524569201
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3641cb932ced5f24783c338c4f340028, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -110,19 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.4, y: 3.44}
   m_EdgeRadius: 0
---- !u!114 &3930605589302145458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3930605589302145457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c1d86108da2eb42b9b4e2fbb73b350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyPlayer: {fileID: 0}
 --- !u!50 &3400065273231940810
 Rigidbody2D:
   serializedVersion: 4
@@ -144,3 +131,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-8843338533559422374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3930605589302145457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3635ca255aef18468c0e5bb574a8f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

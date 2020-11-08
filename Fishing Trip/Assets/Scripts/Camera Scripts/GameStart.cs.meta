@@ -3,7 +3,24 @@ guid: a09b654f7202e8b4ea68e0f65f3bac39
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Player1: {fileID: 9040060647462597986, guid: 77cd64e321f32854e9e7e8f222452d59,
+      type: 3}
+  - Player2: {fileID: 2585258264785345259, guid: 1e6e23ccfc7728f4588ff7ccda25cc64,
+      type: 3}
+  - Player3: {fileID: 6520000992722582323, guid: 9da085667b500ba419def64de0fa5e84,
+      type: 3}
+  - Player4: {fileID: 6090004863868769849, guid: 8514bcdb624a55f48af6cd1eb679ff70,
+      type: 3}
+  - Player5: {fileID: 4787765132873285822, guid: 3774fc69ab69cda4d8f0ce4b62a1010c,
+      type: 3}
+  - Border: {fileID: 3930605589302145461, guid: 7bd2499e527f3124ab9acf0f927e8252,
+      type: 3}
+  - field: {fileID: 5720167507140631325, guid: a84c901c8ac4ad44c809d365e8843940, type: 3}
+  - forest: {fileID: 8283071987127693092, guid: a3be1cd41cd95ea43b8155e6a594bcef,
+      type: 3}
+  - beach: {fileID: 5349175459202798314, guid: 011581b4de0cc7e4798ae9ed9eb2a4be, type: 3}
+  - cam: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

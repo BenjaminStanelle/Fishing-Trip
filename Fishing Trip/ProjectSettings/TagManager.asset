@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: CamBorder
+    uniqueID: 3770398095
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
