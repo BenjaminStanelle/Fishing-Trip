@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3182971105c2b44e83c4596c43e47bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waittime: 10
+  waitSecs: 10
 --- !u!212 &2193848412690463327
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundDestroy : MonoBehaviour
+public class SelfDestroy : MonoBehaviour
 {
-    public float waittime;
+    public float waitSecs;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,6 @@ public class GroundDestroy : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Destroy(this.gameObject, waittime);
+        Destroy(this.gameObject, waitSecs); //second variable is time to wait before destroying, in seconds.
     }
 }
