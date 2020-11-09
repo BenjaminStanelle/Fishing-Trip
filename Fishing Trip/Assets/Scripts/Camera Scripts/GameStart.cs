@@ -23,18 +23,10 @@ public class GameStart : MonoBehaviour
     // Awake is called before Start
     void Awake()
     {
-        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        Instantiate(Border, new Vector3(screenBounds.x * -1, 0, 0), Quaternion.Euler(0,0,90));
-        Instantiate(Border, new Vector3(screenBounds.x, 0, 0), Quaternion.Euler(0, 0, 90));
-        Instantiate(Player5, new Vector3(0, -3, 0), transform.rotation);
-
-        //Tia Benson, start with field background
-        cam = GetComponent<Camera>();   //TB
-        Field = Instantiate(field, new Vector3(cam.transform.position.x, cam.transform.position.y, 0), cam.transform.rotation);   
-        tempField = Field.transform.parent;
-        Field.transform.parent = cam.transform;
-
-        //This stuff creates camera borders, and the player. Player creation will be updated in future.
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));//find the screenboundaries and save the location
+        Instantiate(Border, new Vector3(screenBounds.x * -1, 0, 0), Quaternion.Euler(0,0,90));//place border at left screen bound, rotated 90 degrees Z
+        Instantiate(Border, new Vector3(screenBounds.x, 0, 0), Quaternion.Euler(0, 0, 90));//place border at right screen bound, rotated 90 degrees Z
+        Instantiate(Player5, new Vector3(0, -3, 0), transform.rotation);//create player, will become more complex when skin settings works
     }
 
     // Start is called before the first frame update
@@ -44,13 +36,13 @@ public class GameStart : MonoBehaviour
     }
 
     // Update is called once per frame
-    //Tia Benson
     void Update()
     {
-        Replace();
+        
     }
 
-    void Replace()
+    //Leaving this to help me develop changing backgrounds later, Jeremy
+    /*void Replace()
     {
         timer += Time.deltaTime;    //keep track of seconds
 
@@ -82,5 +74,5 @@ public class GameStart : MonoBehaviour
             timer = 0.0f;
             track = 0;
         }
-    }
+    }*/
 }
