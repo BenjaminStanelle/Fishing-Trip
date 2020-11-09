@@ -667,6 +667,7 @@ MonoBehaviour:
   BaseSpeed: 15
   AlterSpeed: 10
   jumpForce: 15
+  rb: {fileID: 6090004863868769844}
 --- !u!114 &6090004863868769841
 MonoBehaviour:
   m_ObjectHideFlags: 0

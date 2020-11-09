@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMove : MonoBehaviour
 {
     public float BaseSpeed = 10;
     public float AlterSpeed = 5;
     public float jumpForce = 10;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
    
 
     private void Start()
@@ -22,7 +24,7 @@ public class PlayerMove : MonoBehaviour
         Jump();
     }
 
-    private void moveHorizontal()
+    public void moveHorizontal()
     {
         rb.velocity = new Vector2(BaseSpeed, rb.velocity.y); //Constant horizontal speed
 
@@ -31,10 +33,10 @@ public class PlayerMove : MonoBehaviour
         // slow down, speed up controls AKA left and right movement on the screen
     }
     
-    private void Jump()
+    public void Jump()
     { // If input keyboard is "Jump" and character is not in the air add force to jump up
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
-            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        if (CrossPlatformInputManager.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
+            rb.AddForce(new Vector2(0f, jumpForce*3.1f), ForceMode2D.Impulse);
         
 
     }
