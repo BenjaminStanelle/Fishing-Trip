@@ -13,12 +13,12 @@ public class GameStart : MonoBehaviour
     private Vector2 screenBounds;
 
     //Tia Benson
-    public GameObject field, forest, beach = null; 
+    /*public GameObject field, forest, beach = null; 
     private GameObject Field, Forest, Beach;    //clones of gameObject
     public Camera cam = null;         
     private Transform tempField;
     public float timer = 0.0f;
-    private int track = 0;
+    private int track = 0;*/
 
     // Awake is called before Start
     void Awake()

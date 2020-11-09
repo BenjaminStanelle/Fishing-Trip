@@ -13,14 +13,14 @@ public class LevelGenerator1 : MonoBehaviour
     private Vector3 lastGroundEndPosition, lastBackgroundEndPosition; //for holding the end position of the current ground/background
 
 
-    public float Spawn_Distance_To_Player; //for distance to spawn ground from player
+    public float Spawn_Distance_To_Player, BG_Spawn_Distance; //for distance to spawn objects from player
 
     // Awake is called before Start
     private void Awake()
     {
         Backgroundpart = fieldpart; //sets backgroundpart to start as Field, function will be made to change this variable to other backgrounds later.
         lastGroundEndPosition = groundstart.transform.Find("EndPosition").position;//Find first ground end position
-        lastBackgroundEndPosition = fieldstart.transform.Find("EndPosition").position;//find first background end position
+        lastBackgroundpart = fieldstart;//find first background end position
     }
 
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class LevelGenerator1 : MonoBehaviour
             SpawnGroundProcess();//if distance between player and end of last spawned ground piece is below spawn distance, run SpawnGroundProcess
         }
         
-        if(Vector3.Distance(Player.transform.position, lastBackgroundEndPosition) < Spawn_Distance_To_Player)
+        if(Vector3.Distance(Player.transform.position, lastBackgroundEndPosition) < BG_Spawn_Distance)
         {
             SpawnBackgroundProcess();//same as above, but for background
         }
@@ -57,8 +57,8 @@ public class LevelGenerator1 : MonoBehaviour
 
     private void SpawnBackgroundProcess()
     {
-        lastBackgroundpart = SpawnBackground(lastBackgroundEndPosition);
         lastBackgroundEndPosition = lastBackgroundpart.transform.Find("EndPosition").position;
+        lastBackgroundpart = SpawnBackground(lastBackgroundEndPosition);
     }
 
     private GameObject SpawnBackground(Vector3 SpawnPosition)

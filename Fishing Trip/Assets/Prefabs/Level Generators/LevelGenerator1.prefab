@@ -46,4 +46,7 @@ MonoBehaviour:
   groundpart: {fileID: 3992014291112498418, guid: b034d9a5a36270941afc318e007629eb,
     type: 3}
   groundstart: {fileID: 0}
-  Spawn_Distance_To_Player: 50
+  fieldpart: {fileID: 0}
+  fieldstart: {fileID: 0}
+  Spawn_Distance_To_Player: 150
+  BG_Spawn_Distance: 50
