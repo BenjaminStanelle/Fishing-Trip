@@ -253,11 +253,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359187777}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3635ca255aef18468c0e5bb574a8f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsBG: 0
 --- !u!50 &359187781
 Rigidbody2D:
   serializedVersion: 4
@@ -765,7 +766,7 @@ PrefabInstance:
     - target: {fileID: 4668696673250591632, guid: 651aa6e3961a81445997e77211c85ba4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.85658
+      value: -35.66
       objectReference: {fileID: 0}
     - target: {fileID: 4668696673250591632, guid: 651aa6e3961a81445997e77211c85ba4,
         type: 3}
@@ -1267,11 +1268,6 @@ MonoBehaviour:
   Player4: {fileID: 6090004863868769849, guid: 8514bcdb624a55f48af6cd1eb679ff70, type: 3}
   Player5: {fileID: 4787765132873285822, guid: 3774fc69ab69cda4d8f0ce4b62a1010c, type: 3}
   Border: {fileID: 3930605589302145461, guid: 7bd2499e527f3124ab9acf0f927e8252, type: 3}
-  field: {fileID: 5720167507140631325, guid: a84c901c8ac4ad44c809d365e8843940, type: 3}
-  forest: {fileID: 8283071987127693092, guid: a3be1cd41cd95ea43b8155e6a594bcef, type: 3}
-  beach: {fileID: 5349175459202798314, guid: 011581b4de0cc7e4798ae9ed9eb2a4be, type: 3}
-  cam: {fileID: 1818890981}
-  timer: 0
 --- !u!50 &1818890979
 Rigidbody2D:
   serializedVersion: 4
@@ -1370,6 +1366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3635ca255aef18468c0e5bb574a8f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsBG: 0
 --- !u!1 &1985015969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,7 +1587,7 @@ PrefabInstance:
     - target: {fileID: 8694277948958279027, guid: 3e7f71ff0c668ac4c9a204506278ff55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.5
+      value: -35.63
       objectReference: {fileID: 0}
     - target: {fileID: 8694277948958279027, guid: 3e7f71ff0c668ac4c9a204506278ff55,
         type: 3}
@@ -1688,6 +1685,18 @@ PrefabInstance:
       propertyPath: fieldstart
       value: 
       objectReference: {fileID: 1271202803}
+    - target: {fileID: 3242381562992884600, guid: 3f2b3bcc768621248b9de4a15d773af1,
+        type: 3}
+      propertyPath: forestpart
+      value: 
+      objectReference: {fileID: 1831676341693332393, guid: 37fca9f314bbc9b4a9d6869ed9459aae,
+        type: 3}
+    - target: {fileID: 3242381562992884600, guid: 3f2b3bcc768621248b9de4a15d773af1,
+        type: 3}
+      propertyPath: beachpart
+      value: 
+      objectReference: {fileID: 4234874384711643729, guid: 698b719c96f67d246b40ce3cfc3fd7d3,
+        type: 3}
     - target: {fileID: 7919938239924779647, guid: 3f2b3bcc768621248b9de4a15d773af1,
         type: 3}
       propertyPath: m_Name

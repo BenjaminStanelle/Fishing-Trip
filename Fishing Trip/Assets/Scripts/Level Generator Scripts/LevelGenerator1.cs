@@ -8,9 +8,12 @@ public class LevelGenerator1 : MonoBehaviour
     [SerializeField] private GameObject groundstart = null;
     [SerializeField] private GameObject fieldpart = null;
     [SerializeField] private GameObject fieldstart = null;
+    [SerializeField] private GameObject forestpart = null;
+    [SerializeField] private GameObject beachpart = null;
 
     private GameObject Player, lastgroundpart, GroundEnd, lastBackgroundpart, BackgroundEnd, Backgroundpart;
     private Vector3 lastGroundEndPosition, lastBackgroundEndPosition; //for holding the end position of the current ground/background
+    private int counter=0;
 
 
     public float Spawn_Distance_To_Player, BG_Spawn_Distance; //for distance to spawn objects from player
@@ -27,6 +30,8 @@ public class LevelGenerator1 : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindWithTag("Player");//Find player after it has been created
+        InvokeRepeating("ChangeBG", 10f, 10f);// this calls ChangeBG function after 10s then repeats every 10s, temporary solution to BG changes.
+        //Don't delete, will be used in LevelGenerator3 to change the backgrounds even once the difficulty is max
     }
 
     // Update is called once per frame
@@ -36,7 +41,7 @@ public class LevelGenerator1 : MonoBehaviour
         {
             SpawnGroundProcess();//if distance between player and end of last spawned ground piece is below spawn distance, run SpawnGroundProcess
         }
-        
+
         if(Vector3.Distance(Player.transform.position, lastBackgroundEndPosition) < BG_Spawn_Distance)
         {
             SpawnBackgroundProcess();//same as above, but for background
@@ -67,4 +72,22 @@ public class LevelGenerator1 : MonoBehaviour
         return BackgroundEnd;
     }
 
+    private void ChangeBG()
+    {
+        if (counter==0)
+        {
+            counter++;
+            Backgroundpart = forestpart;
+        }
+        else if (counter == 1)
+        {
+            counter++;
+            Backgroundpart = beachpart;
+        }
+        else
+        {
+            counter = 0;
+            Backgroundpart = fieldpart;
+        }
+    }
 }
