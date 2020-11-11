@@ -9,9 +9,8 @@ public class enemySpawner : MonoBehaviour
 
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
-    int bullSpawn = 0;
-    int dogSpawn = 1;
-    int pick = 0;
+    int bullSpawn = 0, dogSpawn = 1, chickenSpawn = 2, powerUpSpawnMin=3, powerUpSpawnMax = 5, powerUpSpawn=3;
+    int pickEnemy = 0, pickPowerUp=3;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,23 +37,47 @@ public class enemySpawner : MonoBehaviour
     {
         //if (Mathf.RoundToInt(Time.time) % 30 == 1)  
         Instantiate(enemyPrefabs[dogSpawn], spawnPoints[dogSpawn].position, transform.rotation);
+    }
+
+    void spawnChickenFun()
+    {
+        //if (Mathf.RoundToInt(Time.time) % 30 == 1)  
+        Instantiate(enemyPrefabs[chickenSpawn], spawnPoints[chickenSpawn].position, transform.rotation);
+    }
+
+    void spawnPowerUp()
+    {
+        //if (Mathf.RoundToInt(Time.time) % 30 == 1)  
+        pickPowerUp = Random.Range(3, enemyPrefabs.Length);     //actual powerup
+        powerUpSpawn= Random.Range(powerUpSpawnMin, powerUpSpawnMax);   //position
+
+
+        Instantiate(enemyPrefabs[pickPowerUp], spawnPoints[powerUpSpawn].position, transform.rotation);
 
     }
+    
 
     public IEnumerator Wait()
     {
         IsRunning = 0;
         yield return new WaitForSeconds(NumberofSeconds);
-        pick = Random.Range(0, enemyPrefabs.Length);
-
-        if (pick == 0)
+        pickEnemy = Random.Range(0, 2);
+        
+        if (pickEnemy == 0)
         {
             spawnBullFun();
         }
-        else if (pick == 1)
+        else if (pickEnemy == 1)
         {
             spawnDogFun();
         }
+        else if (pickEnemy == 2)
+        {
+            spawnChickenFun();
+        }
+        //if statements for different levels to wait for different amount of time
+        yield return new WaitForSeconds(Random.Range(1, 5));
+        spawnPowerUp();
         IsRunning = 1;
     }
 }
