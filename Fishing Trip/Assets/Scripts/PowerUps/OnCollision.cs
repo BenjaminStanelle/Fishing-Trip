@@ -13,6 +13,10 @@ public class OnCollision : MonoBehaviour
         {
             Destroy(this.gameObject); 
         }
+        else
+        {
+            Destroy(this.gameObject,5);
+        }
       
 
     }

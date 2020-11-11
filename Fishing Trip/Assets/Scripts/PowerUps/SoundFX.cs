@@ -23,7 +23,10 @@ public class SoundFX : MonoBehaviour
             float wait = track.clip.length;
             Destroy(gameObject,wait);
         }
-            
+        else 
+        {
+            Destroy(gameObject, 5 );
+        }   
 
     }
    
