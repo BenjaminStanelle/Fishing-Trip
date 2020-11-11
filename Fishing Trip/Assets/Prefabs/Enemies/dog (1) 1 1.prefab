@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 5236839913561441652}
   m_Layer: 0
   m_Name: dog (1) 1 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -936,8 +936,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14c74bc82126d14e898758e882df992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumberofSeconds: 4
+  IsRunning: 1
   dust: {fileID: 2163628542963453648}
-  speed: 30
+  speed: 25
 --- !u!1 &5236839913654521984
 GameObject:
   m_ObjectHideFlags: 0

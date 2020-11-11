@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 7195351866542804713}
   m_Layer: 0
   m_Name: SpawnPointArr
-  m_TagString: Untagged
+  m_TagString: powerUps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
