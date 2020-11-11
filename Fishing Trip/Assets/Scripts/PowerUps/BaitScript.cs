@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class BaitScript : MonoBehaviour
 {
+    public static int bonusScore = 0;
     public AudioClip SoundToPlay;
     public AudioSource audio;
     public int NumberofSeconds = 8;
@@ -41,11 +42,17 @@ public class BaitScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             audio.PlayOneShot(SoundToPlay, Volume);
-            //power up effect goes here.
+            // Add 1 point for each collision with powerUps
+            bonusScore += 1;
+            BaitScore.score = bonusScore;
+           
+
             //Destroy(this.gameObject);
             if (IsRunning1 == 1)
             {
+                
                 StartCoroutine(Wait1());
+                
             }
         }
     }
