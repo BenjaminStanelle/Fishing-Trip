@@ -62,7 +62,7 @@ public class LevelGenerator1 : MonoBehaviour
 
     private void SpawnBackgroundProcess()
     {
-        lastBackgroundEndPosition = lastBackgroundpart.transform.Find("EndPosition").position;
+        lastBackgroundEndPosition = lastBackgroundpart.transform.Find("EndPosition").position;// do this first so SpawnPosition will be appropriate, since the Backgrounds move
         lastBackgroundpart = SpawnBackground(lastBackgroundEndPosition);
     }
 
@@ -72,7 +72,7 @@ public class LevelGenerator1 : MonoBehaviour
         return BackgroundEnd;
     }
 
-    private void ChangeBG()
+    private void ChangeBG()//currently runs every 10 seconds for ease of testing, actual timer can be decided later. Don't delete, will be used in LevelGenerator3
     {
         if (counter==0)
         {
