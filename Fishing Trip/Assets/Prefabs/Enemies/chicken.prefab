@@ -238,8 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberofSeconds: 5
   IsRunning: 1
-  dust: {fileID: 0}
-  speed: 10
+  speed: 5
 --- !u!114 &5127631433914167475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,5 +253,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumberofSeconds: 6
   IsRunning: 1
-  dust: {fileID: 0}
   speed: 10

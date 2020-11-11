@@ -49,7 +49,7 @@ public class enemySpawner : MonoBehaviour
     {
         //if (Mathf.RoundToInt(Time.time) % 30 == 1)  
         pickPowerUp = Random.Range(3, enemyPrefabs.Length);     //actual powerup
-        powerUpSpawn= Random.Range(powerUpSpawnMin, powerUpSpawnMax);   //position
+        powerUpSpawn= Random.Range(powerUpSpawnMin, spawnPoints.Length);   //position
 
 
         Instantiate(enemyPrefabs[pickPowerUp], spawnPoints[powerUpSpawn].position, transform.rotation);
@@ -61,7 +61,7 @@ public class enemySpawner : MonoBehaviour
     {
         IsRunning = 0;
         yield return new WaitForSeconds(NumberofSeconds);
-        pickEnemy = Random.Range(0, 2);
+        pickEnemy = Random.Range(0, 3); //exclusive max range value
         
         if (pickEnemy == 0)
         {
