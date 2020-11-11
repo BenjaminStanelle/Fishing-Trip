@@ -37,7 +37,11 @@ public class LevelGenerator1 : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(Vector3.Distance(Player.transform.position, lastGroundEndPosition) < Spawn_Distance_To_Player)
+        if(GameObject.FindWithTag("Player")== null)
+        {
+            return;
+        }
+        if (Vector3.Distance(Player.transform.position, lastGroundEndPosition) < Spawn_Distance_To_Player)
         {
             SpawnGroundProcess();//if distance between player and end of last spawned ground piece is below spawn distance, run SpawnGroundProcess
         }
