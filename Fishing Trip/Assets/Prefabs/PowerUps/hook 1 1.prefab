@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5055812370162745235}
   - component: {fileID: 5055812370162745326}
   - component: {fileID: 2001823896570361915}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: hook 1 1
   m_TagString: powerUps
   m_Icon: {fileID: 0}

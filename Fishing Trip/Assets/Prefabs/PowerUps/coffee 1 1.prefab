@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4637667772144020931}
   - component: {fileID: 4637667772144020943}
   - component: {fileID: 4637667772144020942}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: coffee 1 1
   m_TagString: powerUps
   m_Icon: {fileID: 0}

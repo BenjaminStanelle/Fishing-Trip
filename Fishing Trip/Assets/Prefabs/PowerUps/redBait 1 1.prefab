@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7828608007828023431}
   - component: {fileID: 7828608007828023430}
   - component: {fileID: 9047550738597124843}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: redBait 1 1
   m_TagString: powerUps
   m_Icon: {fileID: 0}

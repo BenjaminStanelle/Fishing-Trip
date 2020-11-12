@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 488578361868923571}
   - component: {fileID: 488578361868923572}
   - component: {fileID: 989088477880210108}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: blueBait 1 1
   m_TagString: powerUps
   m_Icon: {fileID: 0}

@@ -15,6 +15,13 @@ public class HookScript : MonoBehaviour
     public int IsRunning = 1, IsRunning1 = 1;
     Vector3 movement = new Vector3(-1, 0f, 0f);
     public float speed = 2, Volume;
+
+    //Jeremy
+    private Renderer rend;
+    private BoxCollider2D collision;
+    // end Jeremy
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,16 +44,21 @@ public class HookScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        //if its a player kill the player then switch to menu
-        if (other.gameObject.tag == "Player")
+        //on collision, play sound, disable renderer and collider, then destroy object after sound.
+        //Jeremy
+        audio.PlayOneShot(SoundToPlay, Volume);
+        rend = GetComponent<SpriteRenderer>();
+        rend.enabled = false;
+        collision = GetComponent<BoxCollider2D>();
+        collision.enabled = false;
+        //end Jeremy
+
+        //Destroy(this.gameObject);
+        if (IsRunning1 == 1)
         {
-            audio.PlayOneShot(SoundToPlay, Volume);
-            //power up effect goes here.
-            //Destroy(this.gameObject);
-            if (IsRunning1 == 1)
-            {
-                StartCoroutine(Wait1());
-            }
+
+            StartCoroutine(Wait1());
+
         }
     }
 
