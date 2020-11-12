@@ -16,7 +16,10 @@ public class BaitScript : MonoBehaviour
     Vector3 movement = new Vector3(-1, 0f, 0f);
     public float speed = 2, Volume;
 
-    private Renderer rend; //Jeremy
+    //Jeremy
+    private Renderer rend;
+    private BoxCollider2D collision;
+    // end Jeremy
 
     // Start is called before the first frame update
     void Start()
@@ -40,11 +43,13 @@ public class BaitScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        //if its a player, play sound, disable renderer, then destroy object after sound.
+        //on collision, play sound, disable renderer and collider, then destroy object after sound.
         //Jeremy
         audio.PlayOneShot(SoundToPlay, Volume);
         rend = GetComponent<SpriteRenderer>();
         rend.enabled = false;
+        collision = GetComponent<BoxCollider2D>();
+        collision.enabled = false;
         // Add 1 point for each collision with powerUps
         BaitScore.score += 1;
         //end Jeremy
