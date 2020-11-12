@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 488578361868923569}
   - component: {fileID: 488578361868923570}
   - component: {fileID: 488578361868923571}
-  - component: {fileID: 5874815923599041024}
-  - component: {fileID: 415958290948758351}
-  m_Layer: 11
+  - component: {fileID: 488578361868923572}
+  - component: {fileID: 989088477880210108}
+  m_Layer: 9
   m_Name: blueBait 1 1
   m_TagString: powerUps
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4, y: 4.42}
   m_EdgeRadius: 0
---- !u!114 &5874815923599041024
+--- !u!114 &488578361868923572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,13 +123,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundToPlay: {fileID: 8300000, guid: 514dae51774a5c3458643594c10fec63, type: 3}
-  audio: {fileID: 415958290948758351}
+  audio: {fileID: 989088477880210108}
   NumberofSeconds: 8
   IsRunning: 1
   IsRunning1: 1
   speed: 2
   Volume: 1
---- !u!82 &415958290948758351
+--- !u!82 &989088477880210108
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

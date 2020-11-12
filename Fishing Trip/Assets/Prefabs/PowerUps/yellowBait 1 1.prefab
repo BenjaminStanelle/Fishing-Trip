@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5591038998711879652}
   - component: {fileID: 5591038998711879651}
   - component: {fileID: 5560457682011451802}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: yellowBait 1 1
   m_TagString: powerUps
   m_Icon: {fileID: 0}
