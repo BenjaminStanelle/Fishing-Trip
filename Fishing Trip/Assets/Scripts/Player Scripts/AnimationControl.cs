@@ -1,27 +1,23 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityStandardAssets.CrossPlatformInput;
 
 public class AnimationControl: MonoBehaviour
 {
     
     private Animator anim;
-    private Rigidbody2D rb;
 
     private void Start()
     {
         // Get Animator component when game start
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-
+        
     }
 
 
     void Update()
     {
         // Get input from horizontal axis
-        float moveH = CrossPlatformInputManager.GetAxis("Horizontal");
+        float moveH = Input.GetAxisRaw("Horizontal");
         // Call function Run() with passed in value from horizontal input value 
         Run(moveH);
         // Call functioJump()
@@ -51,6 +47,21 @@ public class AnimationControl: MonoBehaviour
             // set default speed = 1f
             anim.speed = 1f;
         }
+        //original movement code for testing animations
+        /*if (Mathf.Abs(moveH)>0)
+        {
+            if (moveH > 0)
+                anim.SetInteger("Run", 2);
+
+            if (moveH < 0)
+            {
+                anim.SetInteger("Run", 1);
+            }
+
+        }
+        else
+            
+            anim.SetInteger("Run", 0);*/
 
     }
    
@@ -59,7 +70,7 @@ public class AnimationControl: MonoBehaviour
         // Check if input is "Jump"
         // set animator parameter "Jump" to 1 to play "Jump" clip
         // otherwise, set "Jump" to 0 to go back to default clip
-        if (CrossPlatformInputManager.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
+        if (Input.GetButtonDown("Jump"))
         {
             anim.SetInteger("Jump", 1);
         }

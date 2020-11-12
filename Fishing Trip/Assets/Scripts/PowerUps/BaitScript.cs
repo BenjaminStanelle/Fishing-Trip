@@ -18,10 +18,7 @@ public class BaitScript : MonoBehaviour
     public float speed = 2, Volume;
 <<<<<<< HEAD
 
-    //Jeremy
-    private Renderer rend;
-    private BoxCollider2D collision;
-    // end Jeremy
+    private Renderer rend; //Jeremy
 
 =======
 >>>>>>> parent of 43ba8b3c... Improving Baitscript
@@ -48,13 +45,15 @@ public class BaitScript : MonoBehaviour
     {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         //on collision, play sound, disable renderer and collider, then destroy object after sound.
+=======
+        //if its a player, play sound, disable renderer, then destroy object after sound.
+>>>>>>> parent of 1ed7bcc7... Powerup Script fixes, Animation Control Fixes
         //Jeremy
         audio.PlayOneShot(SoundToPlay, Volume);
         rend = GetComponent<SpriteRenderer>();
         rend.enabled = false;
-        collision = GetComponent<BoxCollider2D>();
-        collision.enabled = false;
         // Add 1 point for each collision with powerUps
         BaitScore.score += 1;
         //end Jeremy
