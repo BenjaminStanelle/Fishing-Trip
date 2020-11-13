@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float AlterSpeed = 5;
     public float jumpForce = 10;
     public Rigidbody2D rb;
+    private int distance = 0;
    
 
     private void Start()
@@ -22,6 +23,8 @@ public class PlayerMove : MonoBehaviour
     {
         moveHorizontal();
         Jump();
+        distance = (int) (rb.transform.position.x)/100;
+        DistanceScore.score = distance;
     }
 
     public void moveHorizontal()
