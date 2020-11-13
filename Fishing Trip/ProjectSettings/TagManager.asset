@@ -7,6 +7,8 @@ TagManager:
   - groundstart
   - Enemy
   - powerUps
+  - coffee
+  - hook
   layers:
   - Default
   - TransparentFX

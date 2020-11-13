@@ -11,11 +11,15 @@ public class PlayerMove : MonoBehaviour
     public float jumpForce = 10;
     public Rigidbody2D rb;
     private int distance = 0;
+    private float boostTimer;
+    private bool boosting;
    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        boostTimer = 0;
+        boosting = false;
     }
 
 
@@ -23,8 +27,31 @@ public class PlayerMove : MonoBehaviour
     {
         moveHorizontal();
         Jump();
+    
+        // For distance score
         distance = (int) (rb.transform.position.x)/100;
         DistanceScore.score = distance;
+        // For speed boost effect when collide with coffee
+        if(boosting)
+        {
+            boostTimer += Time.deltaTime;
+            if(boostTimer>=5)
+            {
+                boostTimer = 0;
+                BaseSpeed = 10;
+                boosting = false;
+            }
+
+        }
+
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "coffee")
+        {
+            boosting = true;
+            BaseSpeed = 50;
+        }
     }
 
     public void moveHorizontal()

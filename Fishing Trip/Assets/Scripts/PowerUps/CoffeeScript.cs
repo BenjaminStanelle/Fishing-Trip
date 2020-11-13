@@ -51,6 +51,9 @@ public class CoffeeScript : MonoBehaviour
         collision = GetComponent<BoxCollider2D>();
         collision.enabled = false;
         //end Jeremy
+        speed = 500 * speed;
+
+        
 
         //Destroy(this.gameObject);
         if (IsRunning1 == 1)
