@@ -20,7 +20,7 @@ public class MoveDog : MonoBehaviour
     {
         CreateDust();
         MyPlayer = FindObjectOfType<PlayerMove>();
-        speed = MyPlayer.BaseSpeed * 2.2f;
+        speed = MyPlayer.BaseSpeed * 2f;
     }
 
     // Update is called once per frame
@@ -36,17 +36,6 @@ public class MoveDog : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //if its a player kill the player then switch to menu
-        if (other.gameObject.tag == "Player")
-        {
-            Destroy(other.gameObject);
-            //UnloadSceneAsync("SampleScene");
-            SceneManager.LoadScene("MainMenu");
-
-        }
-    }
     void CreateDust()
     {
         dust.Play();

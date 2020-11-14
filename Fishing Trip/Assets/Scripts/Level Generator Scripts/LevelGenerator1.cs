@@ -15,6 +15,7 @@ public class LevelGenerator1 : MonoBehaviour
     private Vector3 lastGroundEndPosition, lastBackgroundEndPosition; //for holding the end position of the current ground/background
     private int counter=0;
     private PlayerMove PlayerSpeed;
+    private CoffeeBoost CoffeeSpeed;
 
     public float DifficultyIncreaseTimer = 10;
     public float Spawn_Distance_To_Player, BG_Spawn_Distance; //for distance to spawn objects from player
@@ -32,7 +33,8 @@ public class LevelGenerator1 : MonoBehaviour
     {
         Player = GameObject.FindWithTag("Player");//Find player after it has been created
         PlayerSpeed = FindObjectOfType<PlayerMove>();
-        InvokeRepeating("ChangeBG", DifficultyIncreaseTimer, DifficultyIncreaseTimer);// this calls ChangeBG function after 10s then repeats every 10s, temporary solution to BG changes.
+        CoffeeSpeed = FindObjectOfType<CoffeeBoost>();
+        InvokeRepeating("ChangeBG", DifficultyIncreaseTimer, DifficultyIncreaseTimer);// this calls ChangeBG function after X seconds then repeats every X seconds, temporary solution to BG changes.
         InvokeRepeating("SpeedUp", DifficultyIncreaseTimer, DifficultyIncreaseTimer);
     }
 
@@ -106,5 +108,6 @@ public class LevelGenerator1 : MonoBehaviour
     {
         PlayerSpeed.BaseSpeed += 5f;
         PlayerSpeed.AlterSpeed += 2.5f;
+        CoffeeSpeed.CoffeeChange = 2.5f;
     }
 }

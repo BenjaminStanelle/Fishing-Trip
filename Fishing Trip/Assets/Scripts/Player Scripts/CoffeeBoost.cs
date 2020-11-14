@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CoffeeBoost : MonoBehaviour
 {
-    public float boostDuration = 5;
-
+    private float boostDuration = 5;
+    public float CoffeeChange = 0; //do not change
     private float boostTimer, OriginalBaseSpeed;
     private bool boosting;
     private PlayerMove MyPlayer;
@@ -32,13 +32,13 @@ public class CoffeeBoost : MonoBehaviour
             if (boostTimer >= boostDuration)
             {
                 boostTimer = 0;
-                MyPlayer.BaseSpeed = OriginalBaseSpeed;
+                MyPlayer.BaseSpeed = OriginalBaseSpeed + CoffeeChange;
                 boosting = false;
             }
 
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "coffee")

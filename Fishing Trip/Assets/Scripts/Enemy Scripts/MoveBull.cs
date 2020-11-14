@@ -31,19 +31,8 @@ public class MoveBull : MonoBehaviour
             {
                 StartCoroutine(Wait());
             }
-}
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //if its a player kill the player then switch to menu
-        if ((other.gameObject.tag == "Player"))
-        {
-            Destroy(other.gameObject);
-            //UnloadSceneAsync("SampleScene");
-            SceneManager.LoadScene("MainMenu");
-
-        }
     }
+
     void CreateDust()
     {
         dust.Play();

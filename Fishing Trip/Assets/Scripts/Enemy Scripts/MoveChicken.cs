@@ -32,19 +32,6 @@ public class MoveChicken : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //if its a player kill the player then switch to menu
-        if (other.gameObject.tag == "Player")
-        {
-            Destroy(other.gameObject);
-            //UnloadSceneAsync("SampleScene");
-            SceneManager.LoadScene("MainMenu");
-
-        }
-    }
-
-
     public IEnumerator Wait()
     {
         IsRunning = 0;
