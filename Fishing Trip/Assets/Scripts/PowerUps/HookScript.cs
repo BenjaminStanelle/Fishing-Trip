@@ -2,9 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityStandardAssets.CrossPlatformInput;
-using UnityEngine.SceneManagement;
+
 
 
 public class HookScript : MonoBehaviour
