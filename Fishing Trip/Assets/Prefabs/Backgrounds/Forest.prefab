@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 756402620133386738}
   - component: {fileID: 3865573120814069716}
   - component: {fileID: 536209109631399718}
-  - component: {fileID: -8064770523468719686}
+  - component: {fileID: -1756294225265634294}
   m_Layer: 0
   m_Name: Forest
   m_TagString: Untagged
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-8064770523468719686
+--- !u!50 &-1756294225265634294
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

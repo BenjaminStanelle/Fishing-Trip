@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: -9084544097775246111}
   - component: {fileID: -6749178575701208504}
   - component: {fileID: -6435526855167883588}
-  - component: {fileID: 8572298471019146491}
+  - component: {fileID: -4156294878154866362}
   m_Layer: 0
   m_Name: Beach
   m_TagString: Untagged
@@ -142,7 +142,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &8572298471019146491
+--- !u!50 &-4156294878154866362
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

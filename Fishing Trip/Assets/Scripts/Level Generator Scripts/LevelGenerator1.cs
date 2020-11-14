@@ -14,8 +14,9 @@ public class LevelGenerator1 : MonoBehaviour
     private GameObject Player, lastgroundpart, GroundEnd, lastBackgroundpart, BackgroundEnd, Backgroundpart;
     private Vector3 lastGroundEndPosition, lastBackgroundEndPosition; //for holding the end position of the current ground/background
     private int counter=0;
+    private PlayerMove PlayerSpeed;
 
-
+    public float DifficultyIncreaseTimer = 10;
     public float Spawn_Distance_To_Player, BG_Spawn_Distance; //for distance to spawn objects from player
 
     // Awake is called before Start
@@ -30,8 +31,9 @@ public class LevelGenerator1 : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindWithTag("Player");//Find player after it has been created
-        InvokeRepeating("ChangeBG", 10f, 10f);// this calls ChangeBG function after 10s then repeats every 10s, temporary solution to BG changes.
-        //Don't delete, will be used in LevelGenerator3 to change the backgrounds even once the difficulty is max
+        PlayerSpeed = FindObjectOfType<PlayerMove>();
+        InvokeRepeating("ChangeBG", DifficultyIncreaseTimer, DifficultyIncreaseTimer);// this calls ChangeBG function after 10s then repeats every 10s, temporary solution to BG changes.
+        InvokeRepeating("SpeedUp", DifficultyIncreaseTimer, DifficultyIncreaseTimer);
     }
 
     // Update is called once per frame
@@ -50,6 +52,11 @@ public class LevelGenerator1 : MonoBehaviour
         {
             SpawnBackgroundProcess();//same as above, but for background
         }
+        /*if (DistanceScore.score %  == 0)
+        {
+            ChangeBG();
+            SpeedUp();
+        }*/
     }
 
     private void SpawnGroundProcess()
@@ -93,5 +100,11 @@ public class LevelGenerator1 : MonoBehaviour
             counter = 0;
             Backgroundpart = fieldpart;
         }
+    }
+
+    void SpeedUp() //this function increases player speed
+    {
+        PlayerSpeed.BaseSpeed += 5f;
+        PlayerSpeed.AlterSpeed += 2.5f;
     }
 }

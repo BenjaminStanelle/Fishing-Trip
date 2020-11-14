@@ -44,6 +44,7 @@ public class CoffeeBoost : MonoBehaviour
         if (other.tag == "coffee")
         {
             boosting = true;
+            OriginalBaseSpeed = MyPlayer.BaseSpeed;
             MyPlayer.BaseSpeed = OriginalBaseSpeed*2;
         }
     }
