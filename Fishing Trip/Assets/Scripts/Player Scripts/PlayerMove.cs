@@ -3,8 +3,6 @@ using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityStandardAssets.CrossPlatformInput;
-using System.Collections;
-using System.Collections.Generic;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -15,17 +13,13 @@ public class PlayerMove : MonoBehaviour
     private int distance = 0;
     private float boostTimer;
     private bool boosting;
-    Renderer ren;
-    Color color;
-
+   
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boostTimer = 0;
         boosting = false;
-        ren = GetComponent<Renderer>();
-        color = ren.material.color;
     }
 
 
@@ -35,7 +29,7 @@ public class PlayerMove : MonoBehaviour
         Jump();
     
         // For distance score
-        distance = (int)(rb.transform.position.x)/100;
+        distance = (int) (rb.transform.position.x)/100;
         DistanceScore.score = distance;
         // For speed boost effect when collide with coffee
         if(boosting)
@@ -58,26 +52,7 @@ public class PlayerMove : MonoBehaviour
             boosting = true;
             BaseSpeed = 50;
         }
-        if (other.gameObject.tag == "hook")
-        {
-            StartCoroutine("GoInvisible");
-        }
     }
-
-    // Invisible effect when collide with hook
-    public IEnumerator GoInvisible()
-    {
-        Physics2D.IgnoreLayerCollision(9, 10, true);
-        color.a = 0.5f;
-        ren.material.color = color;
-        yield return new WaitForSeconds(5f);
-        Physics2D.IgnoreLayerCollision(9, 10, false);
-        color.a = 1f;
-        ren.material.color = color;
-
-
-    }
-
 
     public void moveHorizontal()
     {

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2001823896570361915}
   m_Layer: 11
   m_Name: hook 1 1
-  m_TagString: hook
+  m_TagString: powerUps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
