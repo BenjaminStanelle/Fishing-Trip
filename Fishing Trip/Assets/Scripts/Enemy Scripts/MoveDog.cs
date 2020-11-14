@@ -13,11 +13,14 @@ public class MoveDog : MonoBehaviour
     public int IsRunning = 1;
     public ParticleSystem dust;
     Vector3 movement = new Vector3(1, 0f, 0f);
-    public float speed = 15;
+    private float speed;
+    private PlayerMove MyPlayer;
     // Start is called before the first frame update
     void Start()
     {
         CreateDust();
+        MyPlayer = FindObjectOfType<PlayerMove>();
+        speed = MyPlayer.BaseSpeed * 2.2f;
     }
 
     // Update is called once per frame

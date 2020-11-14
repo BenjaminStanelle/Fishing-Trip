@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50573b1a70dd76418750f038c6fee60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseSpeed: 10
-  AlterSpeed: 10
+  BaseSpeed: 15
+  AlterSpeed: 7.5
   jumpForce: 10
   rb: {fileID: 4787765132873285821}
 --- !u!114 &4787765132873285820

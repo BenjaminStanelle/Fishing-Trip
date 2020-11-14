@@ -8,13 +8,17 @@ public class AnimationControl: MonoBehaviour
     
     private Animator anim;
     private Rigidbody2D rb;
+    private float animationscale=1;
+    private PlayerMove MyPlayer;
+    private float OriginalSpeed;
 
     private void Start()
     {
         // Get Animator component when game start
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-
+        MyPlayer = FindObjectOfType<PlayerMove>();
+        OriginalSpeed = MyPlayer.BaseSpeed;
     }
 
 
@@ -24,9 +28,9 @@ public class AnimationControl: MonoBehaviour
         float moveH = CrossPlatformInputManager.GetAxis("Horizontal");
         // Call function Run() with passed in value from horizontal input value 
         Run(moveH);
-        // Call functioJump()
+        // Call functionJump()
         Jump();
-
+        animationscale = MyPlayer.BaseSpeed / OriginalSpeed;
 
     }
 
@@ -39,17 +43,17 @@ public class AnimationControl: MonoBehaviour
         {
             // If character move right, set speed = 1.5f to go faster than default speed
             if (moveH > 0)
-                anim.speed = 1.5f;
+                anim.speed = animationscale * 1.5f;
             // If character move left, set speed = .5f to go slower than default speed
             if (moveH < 0)
             {
-                anim.speed = .5f;
+                anim.speed = animationscale * .75f;
             }
         }
         else
         {
             // set default speed = 1f
-            anim.speed = 1f;
+            anim.speed = animationscale;
         }
 
     }
