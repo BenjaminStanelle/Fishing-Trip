@@ -1244,6 +1244,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaitScore
       objectReference: {fileID: 0}
+    - target: {fileID: 4979340535420976222, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340535420976222, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340535420976222, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -298
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340535420976222, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -86
+      objectReference: {fileID: 0}
     - target: {fileID: 4979340535433635441, guid: c7a5496061a4d964cad36979a71d7fea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1253,6 +1273,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 348
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340535570886624, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -353.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340535570886624, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340535570886624, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340535570886624, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4979340535824397232, guid: c7a5496061a4d964cad36979a71d7fea,
         type: 3}
@@ -1378,6 +1418,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Game Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340536116363215, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340536116363215, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340536116363215, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979340536116363215, guid: c7a5496061a4d964cad36979a71d7fea,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7a5496061a4d964cad36979a71d7fea, type: 3}
