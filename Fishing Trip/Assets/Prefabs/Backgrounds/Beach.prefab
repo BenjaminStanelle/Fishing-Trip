@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4234874384711643729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4464856919607761751}
@@ -175,10 +175,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: beachImage
       objectReference: {fileID: 0}
+    - target: {fileID: 5754579823582873231, guid: 011581b4de0cc7e4798ae9ed9eb2a4be,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59d3a2a33e93e7d47bda0b1ea43faa23,
+        type: 3}
     - target: {fileID: 9149469687346570288, guid: 011581b4de0cc7e4798ae9ed9eb2a4be,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.14
+      value: 24.94
       objectReference: {fileID: 0}
     - target: {fileID: 9149469687346570288, guid: 011581b4de0cc7e4798ae9ed9eb2a4be,
         type: 3}

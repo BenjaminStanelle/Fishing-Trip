@@ -1516,6 +1516,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4234874384711643729, guid: 698b719c96f67d246b40ce3cfc3fd7d3,
         type: 3}
+    - target: {fileID: 3242381562992884600, guid: 3f2b3bcc768621248b9de4a15d773af1,
+        type: 3}
+      propertyPath: DifficultyIncreaseTimer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7919938239924779647, guid: 3f2b3bcc768621248b9de4a15d773af1,
         type: 3}
       propertyPath: m_Name
