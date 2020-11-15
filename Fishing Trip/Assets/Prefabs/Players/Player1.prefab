@@ -559,8 +559,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSpeed: 15
-  AlterSpeed: 10
-  jumpForce: 10
+  AlterSpeed: 7.5
+  jumpForce: 11
   rb: {fileID: 9040060647462597993}
 --- !u!114 &9040060647462597989
 MonoBehaviour:
@@ -574,8 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c073f1c600ae549b8ad3e686338a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  fallMultiplier: 2
 --- !u!50 &9040060647462597993
 Rigidbody2D:
   serializedVersion: 4
@@ -635,7 +634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a189d155e0eec4889bdfd5a52697e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostDuration: 5
+  CoffeeBaseChange: 0
+  CoffeeAlterChange: 0
 --- !u!114 &825019422750906647
 MonoBehaviour:
   m_ObjectHideFlags: 0

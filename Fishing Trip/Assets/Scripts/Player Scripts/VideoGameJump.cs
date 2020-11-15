@@ -8,7 +8,6 @@ public class VideoGameJump : MonoBehaviour
 {
 
 	public float fallMultiplier = 2.5f;
-	public float lowJumpMultiplier = 2f;
 
 	Rigidbody2D rb;
 
@@ -31,11 +30,6 @@ public class VideoGameJump : MonoBehaviour
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
 			// This gives the character a conventional video game fall speed (regular gravity is "floaty")
 			// Subtract 1 multiplier because we are adding to existing fall speed
-		}
-
-		else if (rb.velocity.y > 0 && !CrossPlatformInputManager.GetButtonDown("Jump"))
-        {
-			rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
 		}
 	}
 }

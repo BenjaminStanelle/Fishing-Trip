@@ -5,8 +5,8 @@ using UnityEngine;
 public class CoffeeBoost : MonoBehaviour
 {
     private float boostDuration = 5;
-    public float CoffeeChange = 0; //do not change
-    private float boostTimer, OriginalBaseSpeed;
+    public float CoffeeBaseChange = 0, CoffeeAlterChange = 0; //do not change, used to prevent a glitch with speed changing while coffee is applied
+    private float boostTimer, OriginalBaseSpeed, OriginalAlterSpeed;
     private bool boosting;
     private PlayerMove MyPlayer;
 
@@ -32,7 +32,8 @@ public class CoffeeBoost : MonoBehaviour
             if (boostTimer >= boostDuration)
             {
                 boostTimer = 0;
-                MyPlayer.BaseSpeed = OriginalBaseSpeed + CoffeeChange;
+                MyPlayer.BaseSpeed = OriginalBaseSpeed + CoffeeBaseChange;
+                MyPlayer.AlterSpeed = OriginalAlterSpeed + CoffeeAlterChange;
                 boosting = false;
             }
 
@@ -45,7 +46,9 @@ public class CoffeeBoost : MonoBehaviour
         {
             boosting = true;
             OriginalBaseSpeed = MyPlayer.BaseSpeed;
-            MyPlayer.BaseSpeed = OriginalBaseSpeed*2;
+            OriginalAlterSpeed = MyPlayer.AlterSpeed;
+            MyPlayer.BaseSpeed = OriginalBaseSpeed *2 ;
+            MyPlayer.AlterSpeed = OriginalAlterSpeed * 2;
         }
     }
 }

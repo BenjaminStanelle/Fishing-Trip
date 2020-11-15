@@ -108,6 +108,7 @@ public class LevelGenerator1 : MonoBehaviour
     {
         PlayerSpeed.BaseSpeed += 5f;
         PlayerSpeed.AlterSpeed += 2.5f;
-        CoffeeSpeed.CoffeeChange = 2.5f;
+        CoffeeSpeed.CoffeeBaseChange = 5f;
+        CoffeeSpeed.CoffeeAlterChange = 2.5f;
     }
 }

@@ -730,8 +730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseSpeed: 15
-  AlterSpeed: 10
-  jumpForce: 15
+  AlterSpeed: 7.5
+  jumpForce: 11
   rb: {fileID: 2585258264785345254}
 --- !u!114 &2585258264785345251
 MonoBehaviour:
@@ -745,8 +745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c073f1c600ae549b8ad3e686338a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  fallMultiplier: 2
 --- !u!114 &5919775376361918789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a189d155e0eec4889bdfd5a52697e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostDuration: 5
+  CoffeeChange: 0
 --- !u!114 &-9146693322567447755
 MonoBehaviour:
   m_ObjectHideFlags: 0
