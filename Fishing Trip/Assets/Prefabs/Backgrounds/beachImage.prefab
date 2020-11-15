@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5349175459202798314
+--- !u!1 &1757377452245542907
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9149469687346570288}
-  - component: {fileID: 5754579823582873231}
+  - component: {fileID: 3217278715203047713}
+  - component: {fileID: 2126609532458955678}
   m_Layer: 0
-  m_Name: beach(Clone) 1(Clone)(Clone)(Clone)
+  m_Name: beachImage 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9149469687346570288
+--- !u!4 &3217278715203047713
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5349175459202798314}
+  m_GameObject: {fileID: 1757377452245542907}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.83, z: 10}
+  m_LocalPosition: {x: 24.94, y: 0, z: 0}
   m_LocalScale: {x: 1.1129754, y: 1.0189939, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5754579823582873231
+--- !u!212 &2126609532458955678
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5349175459202798314}
+  m_GameObject: {fileID: 1757377452245542907}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3afcbc5c63ac301489bcadc86d9b46d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59d3a2a33e93e7d47bda0b1ea43faa23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

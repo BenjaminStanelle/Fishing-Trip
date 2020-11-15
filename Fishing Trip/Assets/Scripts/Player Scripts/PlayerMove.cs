@@ -16,6 +16,8 @@ public class PlayerMove : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        DistanceScore.score = 0;
+        BaitScore.score = 0;
     }
 
 
