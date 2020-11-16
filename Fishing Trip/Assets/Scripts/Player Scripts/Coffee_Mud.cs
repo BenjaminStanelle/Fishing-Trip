@@ -60,6 +60,10 @@ public class Coffee_Mud : MonoBehaviour
                 MyPlayer.BaseSpeed = OriginalBaseSpeed * 2;
                 MyPlayer.AlterSpeed = OriginalAlterSpeed * 2;
             }
+            else if (boosting)//if get coffee and already boosting, reset timer.
+            {
+                boostTimer = 0;
+            }
             else //if get coffee while in mud, adjust current speed.
             {
                 MyPlayer.BaseSpeed = MyPlayer.BaseSpeed * 2;

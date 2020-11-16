@@ -13,10 +13,13 @@ public class MoveChicken : MonoBehaviour
     public int IsRunning = 1;
     Vector3 movement = new Vector3(-1, 0f, 0f);
     public float speed = 15;
+
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animator>();
+        anim.speed = 2f;
     }
 
     // Update is called once per frame

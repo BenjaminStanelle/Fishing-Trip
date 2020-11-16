@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5674344155720872611}
   - component: {fileID: 3351433726934196013}
   - component: {fileID: -6299759042363613689}
-  m_Layer: 0
-  m_Name: Beachbush
+  m_Layer: 10
+  m_Name: Bush
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
