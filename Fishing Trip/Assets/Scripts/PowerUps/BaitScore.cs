@@ -17,7 +17,7 @@ public class BaitScore : MonoBehaviour
 
     private void Update()
     {
-        textComponent.text = "Bait: "+ score.ToString();
+        textComponent.text = "Bait "+ score.ToString();
     }
 }
 

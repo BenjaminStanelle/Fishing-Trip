@@ -16,7 +16,7 @@ public class DistanceScore : MonoBehaviour
 
     private void Update()
     {
-        textComponent.text = "Distance: " + score.ToString();
+        textComponent.text = "Distance " + score.ToString();
     }
 }
 
