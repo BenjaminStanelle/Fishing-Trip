@@ -13,7 +13,7 @@ public class MoveDog : MonoBehaviour //rewritten by Jeremy
     public int IsRunning = 1;
     public ParticleSystem dust;
     Vector3 movement = new Vector3(1, 0f, 0f);
-    private float speed;
+    public float speed;
     private PlayerMove MyPlayer;
     // Start is called before the first frame update
     void Start()

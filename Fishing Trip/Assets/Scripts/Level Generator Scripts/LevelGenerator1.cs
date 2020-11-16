@@ -16,6 +16,8 @@ public class LevelGenerator1 : MonoBehaviour
     private int counter=0;
     private PlayerMove PlayerSpeed;
     private Coffee_Mud DeltaSpeed;
+    private MoveDog DogSpeed;
+    private enemySpawner Spawner;
 
     public float DifficultyIncreaseTimer = 10;
     public float Spawn_Distance_To_Player, BG_Spawn_Distance; //for distance to spawn objects from player
@@ -34,8 +36,8 @@ public class LevelGenerator1 : MonoBehaviour
         Player = GameObject.FindWithTag("Player");//Find player after it has been created
         PlayerSpeed = FindObjectOfType<PlayerMove>();
         DeltaSpeed = FindObjectOfType<Coffee_Mud>();
-        InvokeRepeating("ChangeBG", DifficultyIncreaseTimer, DifficultyIncreaseTimer);// this calls ChangeBG function after X seconds then repeats every X seconds, temporary solution to BG changes.
-        InvokeRepeating("SpeedUp", DifficultyIncreaseTimer, DifficultyIncreaseTimer);
+        Spawner= FindObjectOfType<enemySpawner>();
+        InvokeRepeating("DifficultyUp", DifficultyIncreaseTimer, DifficultyIncreaseTimer);// this calls DifficultyUp function after X seconds then repeats every X seconds
     }
 
     // Update is called once per frame
@@ -54,11 +56,6 @@ public class LevelGenerator1 : MonoBehaviour
         {
             SpawnBackgroundProcess();//same as above, but for background
         }
-        /*if (DistanceScore.score %  == 0)
-        {
-            ChangeBG();
-            SpeedUp();
-        }*/
     }
 
     private void SpawnGroundProcess()
@@ -85,30 +82,33 @@ public class LevelGenerator1 : MonoBehaviour
         return BackgroundEnd;
     }
 
-    private void ChangeBG()//currently runs every 10 seconds for ease of testing, actual timer can be decided later. Don't delete, will be used in LevelGenerator3
+    private void DifficultyUp()//currently runs every 10 seconds for ease of testing, actual timer can be decided later. Don't delete, will be used in LevelGenerator3
     {
-        if (counter==0)
+        switch (counter)//Change Backgrounds
         {
-            counter++;
-            Backgroundpart = forestpart;
+            case 0:
+                counter++;
+                Backgroundpart = forestpart;
+                break;
+            case 1:
+                counter++;
+                Backgroundpart = beachpart;
+                break;
+            case 2:
+                counter = 0;
+                Backgroundpart = fieldpart;
+                break;
         }
-        else if (counter == 1)
-        {
-            counter++;
-            Backgroundpart = beachpart;
-        }
-        else
-        {
-            counter = 0;
-            Backgroundpart = fieldpart;
-        }
-    }
-
-    void SpeedUp() //this function increases player speed
-    {
+        // adjust player speed
         PlayerSpeed.BaseSpeed += 5f;
         PlayerSpeed.AlterSpeed += 2.5f;
         DeltaSpeed.BaseChange = 5f;
         DeltaSpeed.AlterChange = 2.5f;
+        if ((DogSpeed = FindObjectOfType<MoveDog>()) != null)
+        {
+            DogSpeed.speed += 10f;
+        }
+
+        Spawner.NumberofSeconds -= .2f;//increase spawn speed
     }
 }

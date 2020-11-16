@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     public int IsRunning = 1;
-    public int NumberofSeconds;
+    public float NumberofSeconds;
 
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
