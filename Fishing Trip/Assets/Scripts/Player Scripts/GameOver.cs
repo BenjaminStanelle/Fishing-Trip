@@ -20,18 +20,18 @@ public class GameOver : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //if its a player kill the player then switch to menu
+        //if pplayer is immune, destroy obstacle
         if (other.gameObject.tag == "Enemy" && invincible)
         {
             Destroy(other.gameObject);
             invincible = false;
         }
-
+        //if player is not immune, end game
         else if (other.gameObject.tag == "Enemy")
         {
             SceneManager.LoadScene("MainMenu");
         }
-
+        //if player collects hook, turn immune
         else if (other.gameObject.tag == "hook")
         {
             invincible=true;

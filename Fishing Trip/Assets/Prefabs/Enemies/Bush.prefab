@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3576160056231226016}
   - component: {fileID: 5674344155720872611}
   - component: {fileID: 3351433726934196013}
-  m_Layer: 10
+  - component: {fileID: -6299759042363613689}
+  m_Layer: 0
   m_Name: Beachbush
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8263451867544270684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -18.734394, y: -8.97353, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -429053515
-  m_SortingLayer: 2
+  m_SortingLayerID: 110829977
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 937bbceee289c504e8e6bb5df09aa649, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -93,7 +94,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -3.1627378, y: -0.70442104}
@@ -109,9 +110,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.2134314, y: -0.26871586}
   serializedVersion: 2
   m_Radius: 3.601716
+--- !u!58 &-6299759042363613689
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8263451867544270684}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.39018393}
+  serializedVersion: 2
+  m_Radius: 2.926271
