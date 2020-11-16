@@ -24,11 +24,15 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         moveHorizontal();
-        Jump();
     
         // For distance score
         distance = (int) (rb.transform.position.x)/50;
         DistanceScore.score = distance;
+    }
+
+    void FixedUpdate() 
+    {
+        Jump();
     }
 
     public void moveHorizontal()
@@ -43,7 +47,7 @@ public class PlayerMove : MonoBehaviour
     
     public void Jump()
     { // If input keyboard is "Jump" and character is not in the air add force to jump up
-        if (CrossPlatformInputManager.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
+        if (CrossPlatformInputManager.GetButton("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
             rb.AddForce(new Vector2(0f, jumpForce*3.1f), ForceMode2D.Impulse);
         
 

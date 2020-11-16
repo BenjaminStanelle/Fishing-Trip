@@ -13,7 +13,5 @@ public class GameMenu : MonoBehaviour
         gameMenu.SetActive(true);
         Time.timeScale = 0f;
         audio.Pause();
-
-        
     }
 }
