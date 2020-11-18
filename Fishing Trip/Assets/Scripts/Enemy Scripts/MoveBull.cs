@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class MoveBull : MonoBehaviour
 {
+    Camera m_MainCamera;
     public int NumberofSeconds;
     public int IsRunning = 1;
 
@@ -18,6 +19,8 @@ public class MoveBull : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_MainCamera = Camera.main;
+        m_MainCamera.enabled = true;
         CreateDust();
     }
 
@@ -26,11 +29,11 @@ public class MoveBull : MonoBehaviour
     {
         //Move the bull left at certain speed
         transform.Translate(movement * speed * Time.deltaTime);
-        
-        if(IsRunning == 1)
-            {
-                StartCoroutine(Wait());
-            }
+        if (this.transform.position.x < (m_MainCamera.transform.position.x - 40) || this.transform.position.y < (m_MainCamera.transform.position.y - 15))
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
     void CreateDust()
@@ -38,12 +41,6 @@ public class MoveBull : MonoBehaviour
         dust.Play();
     }
 
-    public IEnumerator Wait()
-    {
-        IsRunning = 0;
-        yield return new WaitForSeconds(NumberofSeconds);
-        Destroy(this.gameObject);
-        IsRunning = 1;
-    }
+  
 
 }

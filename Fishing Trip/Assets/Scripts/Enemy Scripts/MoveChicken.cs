@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class MoveChicken : MonoBehaviour
 {
+    Camera m_MainCamera;
     public int NumberofSeconds;
     public int IsRunning = 1;
     Vector3 movement = new Vector3(-1, 0f, 0f);
@@ -18,6 +19,8 @@ public class MoveChicken : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_MainCamera = Camera.main;
+        m_MainCamera.enabled = true;
         anim = GetComponent<Animator>();
         anim.speed = 2f;
     }
@@ -27,19 +30,14 @@ public class MoveChicken : MonoBehaviour
     {
         //Move the bull left at certain speed
         transform.Translate(movement * speed * Time.deltaTime);
-
-        if (IsRunning == 1)
+        if (this.transform.position.x < (m_MainCamera.transform.position.x - 33) || this.transform.position.y < (m_MainCamera.transform.position.y - 15))
         {
-            StartCoroutine(Wait());
+            Destroy(this.gameObject);
         }
 
+
+
     }
 
-    public IEnumerator Wait()
-    {
-        IsRunning = 0;
-        yield return new WaitForSeconds(NumberofSeconds);
-        Destroy(this.gameObject);
-        IsRunning = 1;
-    }
+
 }
