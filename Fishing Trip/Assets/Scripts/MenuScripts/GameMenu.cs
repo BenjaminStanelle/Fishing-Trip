@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameMenu : MonoBehaviour
 {
     public GameObject gameMenu;
-    [SerializeField] private AudioSource audio = null;
+    //[SerializeField] private AudioSource audio = null;
 
 
     void Awake() 
@@ -18,6 +18,6 @@ public class GameMenu : MonoBehaviour
     {
         gameMenu.SetActive(true);
         Time.timeScale = 0f;
-        audio.Pause();
+        AudioListener.pause = true;
     }
 }

@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
    
    void Start() 
    {
-      
+      AudioListener.pause = false;
    }
    
    public void PlayGame ()

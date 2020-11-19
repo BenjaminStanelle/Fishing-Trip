@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class PauseScreen : MonoBehaviour
 {
-   [SerializeField] private AudioSource audio = null;
+   //[SerializeField] private AudioSource audio = null;
 
     public void onContinue()    //when play button pressed, continue audio and game
     {
         gameObject.SetActive(false);
         Time.timeScale = 1f;
-        audio.Play(0);
+        AudioListener.pause = false;
     }
 }
