@@ -109,6 +109,9 @@ public class LevelGenerator1 : MonoBehaviour
             DogSpeed.speed += 10f;
         }
 
-        Spawner.NumberofSeconds -= .2f;//increase spawn speed
+        if (Spawner.NumberofSeconds > 1.5f)
+        {
+            Spawner.NumberofSeconds -= .2f;//increase spawn speed
+        }
     }
 }

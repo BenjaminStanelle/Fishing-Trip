@@ -20,7 +20,7 @@ public class MoveDog : MonoBehaviour //rewritten by Jeremy
     {
         CreateDust();
         MyPlayer = FindObjectOfType<PlayerMove>();
-        speed = MyPlayer.BaseSpeed * 2f;
+        speed = MyPlayer.BaseSpeed * 1.8f;
     }
 
     // Update is called once per frame
