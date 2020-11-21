@@ -608,7 +608,6 @@ GameObject:
   - component: {fileID: 5236839913561441661}
   - component: {fileID: 5236839913561441649}
   - component: {fileID: 5236839913561441652}
-  - component: {fileID: 8216570408753181818}
   m_Layer: 10
   m_Name: dog (1) 1 1
   m_TagString: Enemy
@@ -940,19 +939,7 @@ MonoBehaviour:
   NumberofSeconds: 4
   IsRunning: 1
   dust: {fileID: 2163628542963453648}
---- !u!114 &8216570408753181818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5236839913561441655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3182971105c2b44e83c4596c43e47bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitSecs: 0
+  speed: 0
 --- !u!1 &5236839913654521984
 GameObject:
   m_ObjectHideFlags: 0
