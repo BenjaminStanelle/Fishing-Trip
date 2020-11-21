@@ -2422,7 +2422,7 @@ PrefabInstance:
     - target: {fileID: 3242381562992884600, guid: 3f2b3bcc768621248b9de4a15d773af1,
         type: 3}
       propertyPath: DifficultyIncreaseTimer
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7919938239924779647, guid: 3f2b3bcc768621248b9de4a15d773af1,
         type: 3}
