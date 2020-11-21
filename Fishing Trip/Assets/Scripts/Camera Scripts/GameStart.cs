@@ -20,16 +20,4 @@ public class GameStart : MonoBehaviour
         Instantiate(Border, new Vector3(screenBounds.x, 0, 0), Quaternion.Euler(0, 0, 90));//place border at right screen bound, rotated 90 degrees Z
         Instantiate(Player5, new Vector3(0, -3, 0), transform.rotation);//create player, will become more complex when skin settings works
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

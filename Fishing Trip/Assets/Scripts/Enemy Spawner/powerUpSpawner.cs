@@ -11,11 +11,6 @@ public class powerUpSpawner : MonoBehaviour
     public GameObject[] powerUpPrefabs;
     int coffeeSpawn = 3, hookSpawn = 4;
     int pickPowerUp, spawnPoint, pickBait;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()

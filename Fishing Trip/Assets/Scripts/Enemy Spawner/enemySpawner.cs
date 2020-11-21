@@ -12,11 +12,6 @@ public class enemySpawner : MonoBehaviour
     int bullSpawn = 0, dogSpawn = 1, chickenSpawn = 2;
     int chickenSpawnMin = 2, chickenSpawnMax = 8, chickenSpawnPoint;
     int pickEnemy;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
