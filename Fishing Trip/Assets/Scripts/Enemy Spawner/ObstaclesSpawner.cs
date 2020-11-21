@@ -15,7 +15,7 @@ public class ObstaclesSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeUntilStage2 = (FindObjectOfType<LevelGenerator1>()).DifficultyIncreaseTimer;
     }
 
     // Update is called once per frame

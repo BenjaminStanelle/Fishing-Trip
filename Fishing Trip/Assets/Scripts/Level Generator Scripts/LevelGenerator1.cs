@@ -82,7 +82,7 @@ public class LevelGenerator1 : MonoBehaviour
         return BackgroundEnd;
     }
 
-    private void DifficultyUp()//currently runs every 10 seconds for ease of testing, actual timer can be decided later. Don't delete, will be used in LevelGenerator3
+    private void DifficultyUp()
     {
         switch (counter)//Change Backgrounds
         {

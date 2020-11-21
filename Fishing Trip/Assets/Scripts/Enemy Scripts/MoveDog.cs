@@ -21,7 +21,7 @@ public class MoveDog : MonoBehaviour //rewritten by Jeremy
     {
         CreateDust();
         MyPlayer = FindObjectOfType<PlayerMove>();
-        speed = MyPlayer.BaseSpeed * 1.8f;
+        speed = MyPlayer.BaseSpeed * 1.9f;
         m_MainCamera = Camera.main;
         m_MainCamera.enabled = true;
     }
@@ -31,7 +31,7 @@ public class MoveDog : MonoBehaviour //rewritten by Jeremy
     {
         //Move the dog right at speed based on player movement
         transform.Translate(movement * speed * Time.deltaTime);
-        if (this.transform.position.x > (m_MainCamera.transform.position.x + 32) || this.transform.position.y < (m_MainCamera.transform.position.y - 15))
+        if (this.transform.position.x > (m_MainCamera.transform.position.x + 32) || this.transform.position.y < (m_MainCamera.transform.position.y - 15))//ben
         {
             Destroy(this.gameObject);
         }
