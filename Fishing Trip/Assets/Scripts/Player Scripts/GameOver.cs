@@ -18,7 +18,7 @@ public class GameOver : MonoBehaviour
         //if player is not immune, end game
         else if (other.gameObject.tag == "Enemy")
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("GameOver");
         }
         //if player collects hook, turn immune
         else if (other.gameObject.tag == "hook")
