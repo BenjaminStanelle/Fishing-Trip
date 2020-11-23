@@ -64,6 +64,11 @@ public class HighScoreEntry : MonoBehaviour
 
     }
 
+    void Awake()
+    {
+
+    }
+
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
         float templateHeight = 33f;
@@ -126,4 +131,5 @@ public class HighScoreEntry : MonoBehaviour
         public int score;
         public string name;
     }
+
 }

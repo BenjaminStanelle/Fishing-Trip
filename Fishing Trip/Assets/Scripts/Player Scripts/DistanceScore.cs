@@ -17,6 +17,7 @@ public class DistanceScore : MonoBehaviour
     private void Update()
     {
         textComponent.text = "Distance " + score.ToString();
+        PlayerPrefs.SetInt("DistanceScore", score);
     }
 }
 
