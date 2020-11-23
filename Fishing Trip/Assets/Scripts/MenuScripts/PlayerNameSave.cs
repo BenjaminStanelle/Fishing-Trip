@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerNameSave : MonoBehaviour
 {
 
-    string name;
+    string name = "";
     private TMP_Text textComponent;
 
     void Update()
@@ -15,10 +15,6 @@ public class PlayerNameSave : MonoBehaviour
         textComponent = GetComponent<TMP_Text>();
         name = textComponent.text;
 
-        if (textComponent == null) ;
-        else
-        {
-            PlayerPrefs.SetString("PlayerName", name);
-        }
+        PlayerPrefs.SetString("PlayerName", name);
     }
 }

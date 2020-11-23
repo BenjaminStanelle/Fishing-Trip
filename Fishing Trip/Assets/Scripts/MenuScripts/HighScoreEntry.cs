@@ -33,7 +33,20 @@ public class HighScoreEntry : MonoBehaviour
         //AddHighscoreEntry(10000, "Hi");
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-        
+
+        int lastScore = highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].score;
+        int newScore = PlayerPrefs.GetInt("DistanceScore") + PlayerPrefs.GetInt("BaitScore");
+        string name = PlayerPrefs.GetString("PlayerName");
+
+        if (highscores.highscoreEntryList.Count < 10)
+        {
+            AddHighscoreEntry(newScore, name);
+        }
+        else if(newScore > lastScore)
+        {
+            highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].score = newScore;
+            highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].name = name;
+        }
 
         for(int i = 0; i <highscores.highscoreEntryList.Count; i++)
         {
@@ -64,10 +77,6 @@ public class HighScoreEntry : MonoBehaviour
 
     }
 
-    void Awake()
-    {
-
-    }
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
