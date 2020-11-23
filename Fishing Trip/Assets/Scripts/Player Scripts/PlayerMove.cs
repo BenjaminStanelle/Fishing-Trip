@@ -48,7 +48,7 @@ public class PlayerMove : MonoBehaviour
     public void Jump()
     { // If input keyboard is "Jump" and character is not in the air add force to jump up
         if (CrossPlatformInputManager.GetButton("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
-            rb.AddForce(new Vector2(0f, jumpForce*3.1f), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0f, jumpForce*3.2f), ForceMode2D.Impulse);
         
 
     }
