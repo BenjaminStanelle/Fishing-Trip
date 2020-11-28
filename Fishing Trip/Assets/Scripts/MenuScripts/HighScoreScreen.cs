@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class HighScoreScreen : MonoBehaviour
+public class HighScoreEntry : MonoBehaviour
 {
 
     private Transform entryContainer;
@@ -34,6 +34,7 @@ public class HighScoreScreen : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
+        /*
         int lastScore = highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].score;
         int newScore = PlayerPrefs.GetInt("DistanceScore") + PlayerPrefs.GetInt("BaitScore");
         string name = PlayerPrefs.GetString("PlayerName");
@@ -42,16 +43,18 @@ public class HighScoreScreen : MonoBehaviour
         {
             AddHighscoreEntry(newScore, name);
         }
-        else if(newScore > lastScore)
+        else if (newScore > lastScore)
         {
-            ReplaceHighscoreEntry(newScore, name);
+            highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].score = newScore;
+            highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].name = name;
         }
+        */
 
-        for(int i = 0; i <highscores.highscoreEntryList.Count; i++)
+        for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
         {
-            for(int j = i+1; j < highscores.highscoreEntryList.Count; j++)
+            for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++)
             {
-                if(highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score)
+                if (highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score)
                 {
                     HighscoreEntry tmp = highscores.highscoreEntryList[i];
                     highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
@@ -80,38 +83,38 @@ public class HighScoreScreen : MonoBehaviour
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
         float templateHeight = 33f;
- 
-            Transform entryTransform = Instantiate(entryTemplate, container);
-            RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
-            entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
-            entryTransform.gameObject.SetActive(true);
 
-            int rank = transformList.Count + 1;
-            string rankString;
-            switch (rank)
-            {
-                default:
-                    rankString = rank + "TH";
-                    break;
-                case 1:
-                    rankString = "1ST";
-                    break;
-                case 2:
-                    rankString = "2ND";
-                    break;
-                case 3:
-                    rankString = "3RD";
-                    break;
-            }
-            entryTransform.Find("positionTextTemp").GetComponent<TMPro.TextMeshProUGUI>().text = rankString;
+        Transform entryTransform = Instantiate(entryTemplate, container);
+        RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
+        entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
+        entryTransform.gameObject.SetActive(true);
 
-            int score = highscoreEntry.score;
-            entryTransform.Find("scoreTextTemp").GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString();
+        int rank = transformList.Count + 1;
+        string rankString;
+        switch (rank)
+        {
+            default:
+                rankString = rank + "TH";
+                break;
+            case 1:
+                rankString = "1ST";
+                break;
+            case 2:
+                rankString = "2ND";
+                break;
+            case 3:
+                rankString = "3RD";
+                break;
+        }
+        entryTransform.Find("positionTextTemp").GetComponent<TMPro.TextMeshProUGUI>().text = rankString;
 
-            string name = highscoreEntry.name;
-            entryTransform.Find("nameTextTemp").GetComponent<TMPro.TextMeshProUGUI>().text = name;
+        int score = highscoreEntry.score;
+        entryTransform.Find("scoreTextTemp").GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString();
 
-            transformList.Add(entryTransform);
+        string name = highscoreEntry.name;
+        entryTransform.Find("nameTextTemp").GetComponent<TMPro.TextMeshProUGUI>().text = name;
+
+        transformList.Add(entryTransform);
     }
 
     private void AddHighscoreEntry(int score, string name)
@@ -121,21 +124,6 @@ public class HighScoreScreen : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
-        highscores.highscoreEntryList.Add(highscoreEntry);
-
-        string json = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("highscoreTable", json);
-        PlayerPrefs.Save();
-    }
-
-    private void ReplaceHighscoreEntry(int score, string name)
-    {
-        HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
-
-        string jsonString = PlayerPrefs.GetString("highscoreTable");
-        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-
-        highscores.highscoreEntryList.RemoveAt(highscores.highscoreEntryList.Count - 1);
         highscores.highscoreEntryList.Add(highscoreEntry);
 
         string json = JsonUtility.ToJson(highscores);
@@ -156,3 +144,4 @@ public class HighScoreScreen : MonoBehaviour
     }
 
 }
+
