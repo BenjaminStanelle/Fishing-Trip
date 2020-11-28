@@ -2780,6 +2780,7 @@ GameObject:
   - component: {fileID: 1281645642}
   - component: {fileID: 1281645641}
   - component: {fileID: 1281645640}
+  - component: {fileID: 1281645643}
   m_Layer: 5
   m_Name: PlayerSkinDropdown
   m_TagString: Untagged
@@ -2909,6 +2910,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281645638}
   m_CullTransparentMesh: 0
+--- !u!114 &1281645643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281645638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f210fadc023cf14db595a7daeeb7ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1284226305
 GameObject:
   m_ObjectHideFlags: 0

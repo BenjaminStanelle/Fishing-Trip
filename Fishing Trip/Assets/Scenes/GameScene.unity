@@ -1301,11 +1301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09b654f7202e8b4ea68e0f65f3bac39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: {fileID: 9040060647462597986, guid: 77cd64e321f32854e9e7e8f222452d59, type: 3}
-  Player2: {fileID: 2585258264785345259, guid: 1e6e23ccfc7728f4588ff7ccda25cc64, type: 3}
-  Player3: {fileID: 6520000992722582323, guid: 9da085667b500ba419def64de0fa5e84, type: 3}
-  Player4: {fileID: 6090004863868769849, guid: 8514bcdb624a55f48af6cd1eb679ff70, type: 3}
-  Player5: {fileID: 4787765132873285822, guid: 3774fc69ab69cda4d8f0ce4b62a1010c, type: 3}
+  Male1: {fileID: 6090004863868769849, guid: 8514bcdb624a55f48af6cd1eb679ff70, type: 3}
+  Male2: {fileID: 6520000992722582323, guid: 9da085667b500ba419def64de0fa5e84, type: 3}
+  Female1: {fileID: 9040060647462597986, guid: 77cd64e321f32854e9e7e8f222452d59, type: 3}
+  Female2: {fileID: 2585258264785345259, guid: 1e6e23ccfc7728f4588ff7ccda25cc64, type: 3}
+  Alien: {fileID: 4787765132873285822, guid: 3774fc69ab69cda4d8f0ce4b62a1010c, type: 3}
   Border: {fileID: 3930605589302145461, guid: 7bd2499e527f3124ab9acf0f927e8252, type: 3}
 --- !u!50 &1818890979
 Rigidbody2D:
