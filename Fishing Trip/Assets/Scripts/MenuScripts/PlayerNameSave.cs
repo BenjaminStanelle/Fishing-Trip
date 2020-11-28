@@ -8,11 +8,11 @@ public class PlayerNameSave : MonoBehaviour
 {
 
     string name = "";
-    private TMP_Text textComponent;
+    private Text textComponent;
 
     void Update()
     {
-        textComponent = GetComponent<TMP_Text>();
+        textComponent = GetComponent<Text>();
         name = textComponent.text;
 
         PlayerPrefs.SetString("PlayerName", name);
