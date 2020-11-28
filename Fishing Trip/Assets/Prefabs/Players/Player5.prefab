@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4787765132873285793}
   - component: {fileID: 4787765132873285794}
   - component: {fileID: 4787765132873285795}
-  - component: {fileID: 4787765132873285820}
   - component: {fileID: 4787765132873285792}
   - component: {fileID: 6062691303657135583}
   - component: {fileID: -7425826921455338586}
@@ -165,19 +164,6 @@ MonoBehaviour:
   AlterSpeed: 7.5
   jumpForce: 11
   rb: {fileID: 4787765132873285821}
---- !u!114 &4787765132873285820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4787765132873285818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c073f1c600ae549b8ad3e686338a0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallMultiplier: 2
 --- !u!95 &4787765132873285792
 Animator:
   serializedVersion: 3
@@ -209,7 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a189d155e0eec4889bdfd5a52697e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoffeeChange: 0
+  BaseChange: 0
+  AlterChange: 0
 --- !u!114 &-7425826921455338586
 MonoBehaviour:
   m_ObjectHideFlags: 0

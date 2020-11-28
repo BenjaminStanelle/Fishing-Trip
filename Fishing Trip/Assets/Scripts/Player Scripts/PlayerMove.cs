@@ -7,7 +7,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerMove : MonoBehaviour
 {
     public float BaseSpeed = 10;
-    public float AlterSpeed = 5;
+    public float AlterSpeed = 10;
     public float jumpForce = 10;
     public Rigidbody2D rb;
     private int distance = 0;
@@ -23,8 +23,6 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        moveHorizontal();
-    
         // For distance score
         distance = (int) (rb.transform.position.x)/50;
         DistanceScore.score = distance;
@@ -32,6 +30,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate() 
     {
+        moveHorizontal();
         Jump();
     }
 
@@ -40,7 +39,8 @@ public class PlayerMove : MonoBehaviour
         rb.velocity = new Vector2(BaseSpeed, rb.velocity.y); //Constant horizontal speed
 
         float moveHorizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-        transform.position += new Vector3(moveHorizontal, 0, 0) * Time.deltaTime * AlterSpeed;
+        float moveVertical = CrossPlatformInputManager.GetAxis("Vertical");
+        transform.position += new Vector3(moveHorizontal, 0, moveVertical) * Time.deltaTime * AlterSpeed;
         // slow down, speed up controls AKA left and right movement on the screen
     }
     
@@ -48,9 +48,11 @@ public class PlayerMove : MonoBehaviour
     public void Jump()
     { // If input keyboard is "Jump" and character is not in the air add force to jump up
         if (CrossPlatformInputManager.GetButton("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f)
-            rb.AddForce(new Vector2(0f, jumpForce*3.1f), ForceMode2D.Impulse);
+            //rb.AddForce(new Vector2(0f, jumpForce*3.2f), ForceMode2D.Impulse);
+           // rb.velocity = Vector2.up * jumpForce*3.4f;
+            rb.AddForce(Vector3.up*jumpForce*3.4f, ForceMode2D.Impulse);
         
-
+            
     }
 }
 
