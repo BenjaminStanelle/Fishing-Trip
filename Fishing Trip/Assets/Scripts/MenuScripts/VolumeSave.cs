@@ -6,17 +6,19 @@ using UnityEngine.UI;
 public class VolumeSave : MonoBehaviour
 {
 
-    public Slider slider;
-    public float sliderValue;
-    public void ChangeSldier(float value)
+    private Slider VolumeSliderGet;
+
+    public void OnValueChanged(float newVolume)
     {
-        sliderValue = value;
-        PlayerPrefs.SetFloat("MusicVolume", sliderValue);
+        PlayerPrefs.SetFloat("volume", newVolume);
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        slider.value = PlayerPrefs.GetFloat("MusicVolume");
+        VolumeSliderGet = GameObject.Find("MusicSkinSlider").GetComponent<Slider>();
+        PlayerPrefs.SetFloat("volume", VolumeSliderGet.value);
+        PlayerPrefs.Save();
     }
 }

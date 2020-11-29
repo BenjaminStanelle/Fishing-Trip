@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class HighScoreScreen : MonoBehaviour
+public class HighScoreEntry : MonoBehaviour
 {
 
     private Transform entryContainer;
     private Transform entryTemplate;
-    //private List<HighscoreEntry> highscoreEntryList;
     private List<Transform> highscoreEntryTransformList;
 
     void Start()
@@ -19,33 +18,8 @@ public class HighScoreScreen : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
-        /*
-        highscoreEntryList = new List<HighscoreEntry>()
-        {
-            new HighscoreEntry{ score = 1000, name = "Alex"},
-            new HighscoreEntry{ score = 999, name = "Uyen"},
-            new HighscoreEntry{ score = 777, name = "Tia"},
-            new HighscoreEntry{ score = 778, name = "Ben"},
-            new HighscoreEntry{ score = 666, name = "Jeremy"},
-        };
-        */
-
-        //AddHighscoreEntry(10000, "Hi");
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-
-        int lastScore = highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].score;
-        int newScore = PlayerPrefs.GetInt("DistanceScore") + PlayerPrefs.GetInt("BaitScore");
-        string name = PlayerPrefs.GetString("PlayerName");
-
-        if (highscores.highscoreEntryList.Count < 10)
-        {
-            AddHighscoreEntry(newScore, name);
-        }
-        else if(newScore > lastScore)
-        {
-            ReplaceHighscoreEntry(newScore, name);
-        }
 
         for(int i = 0; i <highscores.highscoreEntryList.Count; i++)
         {
@@ -65,14 +39,6 @@ public class HighScoreScreen : MonoBehaviour
         {
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
-
-        /*
-        Highscores highscores = new Highscores { highscoreEntryList = highscoreEntryList };
-        string json = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("highscoreTable", json);
-        PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetString("highscoreTable"));
-        */
 
     }
 
@@ -112,35 +78,6 @@ public class HighScoreScreen : MonoBehaviour
             entryTransform.Find("nameTextTemp").GetComponent<TMPro.TextMeshProUGUI>().text = name;
 
             transformList.Add(entryTransform);
-    }
-
-    private void AddHighscoreEntry(int score, string name)
-    {
-        HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
-
-        string jsonString = PlayerPrefs.GetString("highscoreTable");
-        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-
-        highscores.highscoreEntryList.Add(highscoreEntry);
-
-        string json = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("highscoreTable", json);
-        PlayerPrefs.Save();
-    }
-
-    private void ReplaceHighscoreEntry(int score, string name)
-    {
-        HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
-
-        string jsonString = PlayerPrefs.GetString("highscoreTable");
-        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-
-        highscores.highscoreEntryList.RemoveAt(highscores.highscoreEntryList.Count - 1);
-        highscores.highscoreEntryList.Add(highscoreEntry);
-
-        string json = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("highscoreTable", json);
-        PlayerPrefs.Save();
     }
 
     private class Highscores
