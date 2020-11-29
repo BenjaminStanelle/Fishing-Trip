@@ -139,6 +139,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundPiece
       objectReference: {fileID: 0}
+    - target: {fileID: 6095437310632902932, guid: 04144225754ecc241af1f9ffac17a50c,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095437310632902932, guid: 04144225754ecc241af1f9ffac17a50c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.3265905
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095437310632902932, guid: 04144225754ecc241af1f9ffac17a50c,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.031463385
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095437310632902932, guid: 04144225754ecc241af1f9ffac17a50c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.3770733
+      objectReference: {fileID: 0}
     - target: {fileID: 6095437310632902935, guid: 04144225754ecc241af1f9ffac17a50c,
         type: 3}
       propertyPath: m_LocalPosition.x
